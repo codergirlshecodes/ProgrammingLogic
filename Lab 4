@@ -1,1 +1,67 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Problem 1: Loop
+        Console.WriteLine("Problem 1: Numbers from 1 to 10");
+        for (int i = 1; i <= 10; i++) 
+        {
+            Console.WriteLine(i);
+        }
+
+        // Problem 2: Even numbers 1 to 20
+        Console.WriteLine("\nProblem 2: Even Numbers from 1 to 20");
+        for (int i = 1; i <= 20; i++)
+        {
+            if (i % 2 == 0) 
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        // Problem 3: Loop Countdown
+        Console.WriteLine("\nProblem 3: While Loop Countdown");
+        int countdown = 5;
+        while (countdown >= 1)
+        {
+            Console.WriteLine(countdown);
+            countdown--;  // Decrease the counter
+        }
+
+        // Problem 4: Do/While User Input
+        Console.WriteLine("\nProblem 4: Do/While User Input");
+        int number;
+        do
+        {
+            Console.Write("Enter a number greater than 100: ");
+            number = Convert.ToInt32(Console.ReadLine());
+        } while (number <= 100); // Repeat until a number greater than 100 is entered
+
+        // Problem 5: While Loop
+        Console.WriteLine("\nProblem 5: Multiples of 10 from 10 to 1000");
+        int multiple = 10;
+        while (multiple <= 1000)
+        {
+            Console.WriteLine(multiple);
+            multiple += 10; // Increment by 10
+        }
+
+        // Problem 6: Pattern Printer
+        Console.WriteLine("\nProblem 6: Triangle Pattern Printer");
+        for (int i = 1; i <= 10; i++) // Outer loop for rows
+        {
+            for (int j = 1; j <= i; j++) // Inner loop for columns
+            {
+                Console.Write("*"); // Print asterisk
+            }
+            Console.WriteLine(); // Move to next line after each row
+        }
+
+        
+        Console.WriteLine("\nPress any key to exit...");
+        Console.ReadKey(); // Wait for user input before closing
+    }
+}
 
