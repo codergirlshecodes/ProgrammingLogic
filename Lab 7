@@ -1,0 +1,94 @@
+// Name: Alexa Cacchiola
+// Assignment: Book Class with Constructors and Methods
+// Date: May 4, 2025
+
+using System;
+
+class Book
+{
+    private string title;
+    private string author;
+
+    // Default Constructor
+    public Book()
+    {
+        title = "Unknown Title";
+        author = "Unknown Author";
+    }
+
+    // Parameterized Constructor (1 parameter)
+    public Book(string newTitle)
+    {
+        title = newTitle;
+        author = "Unknown Author";
+    }
+
+    // Overloaded Constructor (2 parameters)
+    public Book(string newTitle, string newAuthor)
+    {
+        title = newTitle;
+        author = newAuthor;
+    }
+
+    // Getter for title
+    public string GetTitle()
+    {
+        return title;
+    }
+
+    // Setter for title
+    public void SetTitle(string newTitle)
+    {
+        title = newTitle;
+    }
+
+    // Getter for author
+    public string GetAuthor()
+    {
+        return author;
+    }
+
+    // Setter for author
+    public void SetAuthor(string newAuthor)
+    {
+        author = newAuthor;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Student Name: Alexa\n");
+
+        // Problem 1
+        Book book1 = new Book();
+        Console.WriteLine(book1.GetTitle());  // Output: Unknown Title
+
+        book1.SetTitle("C# Fundamentals");
+        Console.WriteLine(book1.GetTitle());  // Output: C# Fundamentals
+
+        Console.WriteLine();
+
+        // Problem 2: Parameterized Constructor
+        Book book2 = new Book("Advanced C#");
+        Console.WriteLine(book2.GetTitle());  // Output: Advanced C#
+
+        Console.WriteLine();
+
+        // Problem 3:Constructor Overloading
+        Book book3 = new Book("Advanced C#", "Alexa");
+        Console.WriteLine("Title: " + book3.GetTitle());
+        Console.WriteLine("Author: " + book3.GetAuthor());
+
+        Console.WriteLine();
+
+        // Problem 4:Setters Methods
+        Book book4 = new Book();
+        book4.SetTitle("Mastering C#");
+        book4.SetAuthor("Jane Smith");
+
+        Console.WriteLine("Title: " + book4.GetTitle());
+        Console.WriteLine("Author: " + book4.GetAuthor());
+    }
+}
