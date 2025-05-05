@@ -16,14 +16,14 @@ class Book
         author = "Unknown Author";
     }
 
-    // Parameterized Constructor (1 parameter)
+    // Parameterized Constructor 
     public Book(string newTitle)
     {
         title = newTitle;
         author = "Unknown Author";
     }
 
-    // Overloaded Constructor (2 parameters)
+    // Overloaded Constructor
     public Book(string newTitle, string newAuthor)
     {
         title = newTitle;
