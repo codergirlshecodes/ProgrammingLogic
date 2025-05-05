@@ -1,0 +1,64 @@
+using System;
+
+class Car
+{
+    // Fields
+    public int year;
+    public string color;
+    public string model;
+
+    // Constructor
+    public Car(int y, string c, string m)
+    {
+        year = y;
+        color = c;
+        model = m;
+    }
+
+    // Problem 1: No Parameters
+    public void Start()
+    {
+        Console.WriteLine("The car is starting.");
+    }
+
+    // Problem 2: With Parameters
+    public void Drive(int miles)
+    {
+        Console.WriteLine($"The car drove {miles} miles.");
+    }
+
+    // Problem 3: Return Value
+    public string GetDescription()
+    {
+        return $"{year} {color} {model}";
+    }
+
+    // Problem 4: Updates a Field
+    public void Repaint(string newColor)
+    {
+        color = newColor;
+        Console.WriteLine($"The car has been repainted to {color}.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create a Car object with updated year, model, and color
+        Car myCar = new Car(2023, "Blue", "Audi");
+
+        // Problem 1
+        myCar.Start();
+
+        // Problem 2
+        myCar.Drive(50);
+
+        // Problem 3
+        string description = myCar.GetDescription();
+        Console.WriteLine(description);
+
+        // Problem 4
+        myCar.Repaint("Red");  // Change color from Blue to Red
+    }
+}
